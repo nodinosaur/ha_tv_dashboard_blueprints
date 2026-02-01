@@ -1,0 +1,90 @@
+blueprint:
+  name: Weather to TV
+  description: |
+    Display current weather on Android TV using HA TV Dashboard notification.
+    Choose your preferred weather service entity.
+    Blueprint version 1.0.0
+  domain: script
+  author: nodinosaur / George
+  source_url: https://github.com/nodinosaur/ha_tv_dashboard_blueprints/blob/main/weather_to_tv.yaml
+  homeassistant:
+    min_version: "2024.6.0"
+
+  input:
+    notify_service:
+      name: Notification Service
+      description: >
+        Enter the notify service (auto-complete works).
+        Example: notify.mobile_app_lounge_tv
+      default: notify.notify
+      selector:
+        text: {}
+
+    weather_config:
+      name: Weather Configuration
+      icon: mdi:weather-partly-cloudy
+      collapsed: true
+      input:
+        weather_entity:
+          name: Weather Entity
+          description: |
+            Select your weather service entity.
+            Examples: weather.met_office_ilford, weather.openweathermap, weather.home
+          selector:
+            entity:
+              domain: weather
+
+        title:
+          name: Title
+          description: |
+            Title displayed on the weather notification.
+          default: "Weather"
+          selector:
+            text: {}
+
+    time_config:
+      name: Time Configuration
+      icon: mdi:clock-outline
+      collapsed: true
+      input:
+        time_entity:
+          name: Time Entity
+          description: |
+            Sensor entity that provides the current time.
+            Default is the built-in sensor.time entity.
+          default: sensor.time
+          selector:
+            entity:
+              domain: sensor
+
+        sun_entity:
+          name: Sun Entity
+          description: |
+            Sun entity for day/night status.
+            Default is the built-in sun.sun entity.
+          default: sun.sun
+          selector:
+            entity:
+              domain: sun
+
+variables:
+  notify_service: !input notify_service
+  weather_entity: !input weather_entity
+  title: !input title
+  time_entity: !input time_entity
+  sun_entity: !input sun_entity
+
+sequence:
+  - action: !input notify_service
+    data:
+      title: "{{ title }}"
+      message: ""
+      data:
+        notif_type: weather
+        weather:
+          temperature: "{{ state_attr(weather_entity, 'temperature') }}"
+          temperature_unit: "{{ state_attr(weather_entity, 'temperature_unit') }}"
+          conditions: "{{ state_translated(weather_entity) }}"
+          state: "{{ states(weather_entity) }}"
+          sun: "{{ states(sun_entity) }}"
+          time: "{{ states(time_entity) }}"
