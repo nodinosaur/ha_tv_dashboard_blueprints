@@ -108,10 +108,10 @@ Requires **HA TV Dashboard 2026.2.1 (139)** or newer
 |----------|------|
 | 📚 **Wiki & Guides** | [View Wiki](https://github.com/nodinosaur/ha_tv_dashboard_wiki/wiki/HA-TV-Dashboard-about) |
 | 🐛 **Issues & Features** | [GitHub Issues](https://github.com/nodinosaur/ha_tv_dashboard_wiki/issues) |
-| 📧 **Email Support** | [tv.dash@androidalliance.co.uk](mailto:tv.dash@androidalliance.co.uk) |
+| 📧 **Email Support** | <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#118;&#46;&#100;&#97;&#115;&#104;&#64;&#97;&#110;&#100;&#114;&#111;&#105;&#100;&#97;&#108;&#108;&#105;&#97;&#110;&#99;&#101;&#46;&#99;&#111;&#46;&#117;&#107;">&#116;&#118;&#46;&#100;&#97;&#115;&#104;&#64;&#97;&#110;&#100;&#114;&#111;&#105;&#100;&#97;&#108;&#108;&#105;&#97;&#110;&#99;&#101;&#46;&#99;&#111;&#46;&#117;&#107;</a> |
 
 ---
 
 <p align="center">
-  Made with ❤️ for the Home Assistant community by [@nodinosaur](https://github.com/nodinosaur)
+  Made with ❤️ for the Home Assistant community by <a href="https://github.com/nodinosaur/">@nodinosaur</a>
 </p>
