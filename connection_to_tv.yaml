@@ -1,0 +1,43 @@
+blueprint:
+  name: Connection Status to TV
+  description: |
+    Send websocket connection status to Android TV using HA TV Dashboard notification.
+    Useful for verifying the TV's connection to Home Assistant.
+    Blueprint version 1.0.0
+  domain: script
+  author: nodinosaur / George
+  source_url: https://github.com/nodinosaur/ha_tv_dashboard_blueprints/blob/main/connection_to_tv.yaml
+  homeassistant:
+    min_version: "2024.6.0"
+
+  input:
+    notify_service:
+      name: Notification Service
+      description: >
+        Enter the notify service (auto-complete works).
+        Example: notify.mobile_app_lounge_tv
+      default: notify.notify
+      selector:
+        text: {}
+
+    title:
+      name: Title
+      description: |
+        Title displayed on the connection notification.
+      default: "Connection Status"
+      selector:
+        text: {}
+
+variables:
+  notify_service: !input notify_service
+  title: !input title
+
+sequence:
+  - action: !input notify_service
+    data:
+      title: "{{ title }}"
+      message: ""
+      data:
+        notif_type: websocket
+        websocket:
+          local: "{{ states('sensor.time') }} "
