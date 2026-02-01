@@ -224,6 +224,7 @@ variables:
   camera_entity: !input camera_entity
   camera_name: !input camera_name
   format: !input format
+  camera_feed: !input camera_feed
   image: !input image
   icon: !input icon
   filter: !input filter
@@ -236,6 +237,14 @@ variables:
   show_frame: !input show_frame
 
 sequence:
+  # Validation: Ensure camera_feed is provided for RTSP/WebRTC
+  - choose:
+      - conditions:
+          - condition: template
+            value_template: "{{ format != 'hls' and not (camera_feed | string | trim) }}"
+        sequence:
+          - stop: "Please enter a Video source URL for RTSP or WebRTC format."
+
   - action: !input notify_service
     data:
       title: "{{ title if title | trim else state_attr(camera_entity, 'friendly_name') }}"
@@ -246,7 +255,7 @@ sequence:
         camera_name: >-
           {{ camera_name if camera_name | trim
             else state_attr(camera_entity, 'friendly_name') }}
-        video: "{{ format }}"
+        video: "{{ format if format == 'hls' else camera_feed }}"
         image: "{{ image if image | trim else none }}"
         icon: "{{ icon if icon | trim else none }}"
         filter: "{{ filter if filter | trim else none }}"
