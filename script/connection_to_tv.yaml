@@ -7,7 +7,7 @@ blueprint:
     Blueprint version 1.0.0
   domain: script
   author: nodinosaur / George
-  source_url: https://github.com/nodinosaur/ha_tv_dashboard_blueprints/blob/main/connection_to_tv.yaml
+  source_url: https://github.com/nodinosaur/ha_tv_dashboard_blueprints/blob/main/script/connection_to_tv.yaml
   homeassistant:
     min_version: "2024.6.0"
 

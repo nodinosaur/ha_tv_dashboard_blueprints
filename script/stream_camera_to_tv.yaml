@@ -6,7 +6,7 @@ blueprint:
     Blueprint version 1.0.1
   domain: script
   author: nodinosaur / George
-  source_url: https://github.com/nodinosaur/ha_tv_dashboard_blueprints/blob/main/stream_camera.yaml
+  source_url: https://github.com/nodinosaur/ha_tv_dashboard_blueprints/blob/main/script/stream_camera_to_tv.yaml
   homeassistant:
     min_version: "2024.6.0"
 
