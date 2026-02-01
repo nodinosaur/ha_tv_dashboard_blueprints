@@ -8,36 +8,60 @@ HA TV Dashboard • Home Assistant Blueprints
 Pick a Blueprint and press button below to add to Home Assistant, or paste the raw URL into:
  **Settings → Automations & Scenes → Blueprints → Import Blueprint**.
 
-**Camera feed notifications** 
+### Script Blueprints
 
-[![Import](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fstream_camera.yaml)
+**Stream Camera to TV**
 
-## Raw urls (copy/paste):
+[![Import](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fscript%2Fstream_camera_to_tv.yaml)
 
-Stream Camera:
+**Transit Status to TV**
 
-- https://github.com/nodinosaur/ha_tv_dashboard_blueprints/blob/main/stream_camera.yaml
+[![Import](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fscript%2Ftransit_to_tv.yaml)
 
-Transit:
-- Coming soon
+**Weather to TV**
 
-Weather:
-- Coming soon
+[![Import](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fscript%2Fweather_to_tv.yaml)
 
-Time
-- Coming soon
+**Time to TV**
 
-Image notications:
-- Coming soon
+[![Import](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fscript%2Ftime_to_tv.yaml)
 
-Warning notifications
-- Coming soon
+**Calendar Today's Events to TV**
+
+[![Import](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fscript%2Fcalendar_todays_events_to_tv.yaml)
+
+**Connection Status to TV**
+
+[![Import](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fscript%2Fconnection_to_tv.yaml)
+
+### Automation Blueprints
+
+**Stream Camera on Trigger to TV**
+
+[![Import](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fautomation%2Fstream_camera_on_trigger_to_tv.yaml)
+
+## Raw URLs (copy/paste)
+
+### Script Blueprints
+- [stream_camera_to_tv.yaml](https://github.com/nodinosaur/ha_tv_dashboard_blueprints/blob/main/script/stream_camera_to_tv.yaml)
+- [transit_to_tv.yaml](https://github.com/nodinosaur/ha_tv_dashboard_blueprints/blob/main/script/transit_to_tv.yaml)
+- [weather_to_tv.yaml](https://github.com/nodinosaur/ha_tv_dashboard_blueprints/blob/main/script/weather_to_tv.yaml)
+- [time_to_tv.yaml](https://github.com/nodinosaur/ha_tv_dashboard_blueprints/blob/main/script/time_to_tv.yaml)
+- [calendar_todays_events_to_tv.yaml](https://github.com/nodinosaur/ha_tv_dashboard_blueprints/blob/main/script/calendar_todays_events_to_tv.yaml)
+- [connection_to_tv.yaml](https://github.com/nodinosaur/ha_tv_dashboard_blueprints/blob/main/script/connection_to_tv.yaml)
+
+### Automation Blueprints
+- [stream_camera_on_trigger_to_tv.yaml](https://github.com/nodinosaur/ha_tv_dashboard_blueprints/blob/main/automation/stream_camera_on_trigger_to_tv.yaml)
+
+### Coming Soon
+- Image notifications
+- Warning notifications
 
 > After importing, go to **Scripts**, click **Create from blueprint**, choose the HA TV blueprint, and fill in the fields.  
 > If scripts don’t show immediately, go to **Developer Tools → YAML → Reload Scripts**.
 
 ## ✅ Requirements
-Design for [HA TV Dashboard](https://play.google.com/store/apps/details?id=io.homeassistant.companion.androidtv)
+Design for [HA TV Dashboard](https://play.google.com/store/apps/details?id=io.homeassistant.companion.androidtv) 2026.2.1 (139) or newer
 
 
 ## 📖 Wiki and raise issues:
