@@ -36,3 +36,7 @@ local.properties
 
 # Firebase configuration file
 google-services.json
+
+/reference
+/prompts
+CLAUDE.md

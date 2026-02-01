@@ -1,0 +1,779 @@
+blueprint:
+  name: Transit Status to TV
+  description: |
+    Display transit line status on Android TV using HA TV Dashboard notification.
+    Configure which lines to display with custom labels, colors, and status sensors.
+    Blueprint version 1.0.0
+  domain: script
+  author: nodinosaur / George
+  source_url: https://github.com/nodinosaur/ha_tv_dashboard_blueprints/blob/main/transit_to_tv.yaml
+  homeassistant:
+    min_version: "2024.6.0"
+
+  input:
+    notify_service:
+      name: Notification Service
+      description: >
+        Enter the notify service (auto-complete works).
+        Example: notify.mobile_app_lounge_tv
+      default: notify.notify
+      selector:
+        text: {}
+
+    title:
+      name: Title
+      description: |
+        Title displayed on the transit notification.
+      default: "Transit Status"
+      selector:
+        text: {}
+
+    group_config:
+      name: Group Header
+      icon: mdi:transit-connection-variant
+      collapsed: true
+      input:
+        group_label:
+          name: Group Label
+          description: |
+            Label for the group header (e.g., "All other lines").
+          default: "All other lines"
+          selector:
+            text: {}
+
+        group_hex_color:
+          name: Group Color
+          description: |
+            Hex color for the group header.
+          default: "#0618A1"
+          selector:
+            text: {}
+
+        group_status:
+          name: Group Status
+          description: |
+            Default status text for the group header.
+          default: "Good Service"
+          selector:
+            text: {}
+
+    # Line 1
+    line_1:
+      name: Line 1
+      icon: mdi:subway-variant
+      collapsed: true
+      input:
+        line_1_enabled:
+          name: Enable Line 1
+          default: false
+          selector:
+            boolean: {}
+        line_1_label:
+          name: Label
+          default: "Line 1"
+          selector:
+            text: {}
+        line_1_hex_color:
+          name: Hex Color
+          default: "#888888"
+          selector:
+            text: {}
+        line_1_status_entity:
+          name: Status Entity
+          description: |
+            Sensor entity for line status.
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+
+    # Line 2
+    line_2:
+      name: Line 2
+      icon: mdi:subway-variant
+      collapsed: true
+      input:
+        line_2_enabled:
+          name: Enable Line 2
+          default: false
+          selector:
+            boolean: {}
+        line_2_label:
+          name: Label
+          default: "Line 2"
+          selector:
+            text: {}
+        line_2_hex_color:
+          name: Hex Color
+          default: "#888888"
+          selector:
+            text: {}
+        line_2_status_entity:
+          name: Status Entity
+          description: |
+            Sensor entity for line status.
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+
+    # Line 3
+    line_3:
+      name: Line 3
+      icon: mdi:subway-variant
+      collapsed: true
+      input:
+        line_3_enabled:
+          name: Enable Line 3
+          default: false
+          selector:
+            boolean: {}
+        line_3_label:
+          name: Label
+          default: "Line 3"
+          selector:
+            text: {}
+        line_3_hex_color:
+          name: Hex Color
+          default: "#888888"
+          selector:
+            text: {}
+        line_3_status_entity:
+          name: Status Entity
+          description: |
+            Sensor entity for line status.
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+
+    # Line 4
+    line_4:
+      name: Line 4
+      icon: mdi:subway-variant
+      collapsed: true
+      input:
+        line_4_enabled:
+          name: Enable Line 4
+          default: false
+          selector:
+            boolean: {}
+        line_4_label:
+          name: Label
+          default: "Line 4"
+          selector:
+            text: {}
+        line_4_hex_color:
+          name: Hex Color
+          default: "#888888"
+          selector:
+            text: {}
+        line_4_status_entity:
+          name: Status Entity
+          description: |
+            Sensor entity for line status.
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+
+    # Line 5
+    line_5:
+      name: Line 5
+      icon: mdi:subway-variant
+      collapsed: true
+      input:
+        line_5_enabled:
+          name: Enable Line 5
+          default: false
+          selector:
+            boolean: {}
+        line_5_label:
+          name: Label
+          default: "Line 5"
+          selector:
+            text: {}
+        line_5_hex_color:
+          name: Hex Color
+          default: "#888888"
+          selector:
+            text: {}
+        line_5_status_entity:
+          name: Status Entity
+          description: |
+            Sensor entity for line status.
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+
+    # Line 6
+    line_6:
+      name: Line 6
+      icon: mdi:subway-variant
+      collapsed: true
+      input:
+        line_6_enabled:
+          name: Enable Line 6
+          default: false
+          selector:
+            boolean: {}
+        line_6_label:
+          name: Label
+          default: "Line 6"
+          selector:
+            text: {}
+        line_6_hex_color:
+          name: Hex Color
+          default: "#888888"
+          selector:
+            text: {}
+        line_6_status_entity:
+          name: Status Entity
+          description: |
+            Sensor entity for line status.
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+
+    # Line 7
+    line_7:
+      name: Line 7
+      icon: mdi:subway-variant
+      collapsed: true
+      input:
+        line_7_enabled:
+          name: Enable Line 7
+          default: false
+          selector:
+            boolean: {}
+        line_7_label:
+          name: Label
+          default: "Line 7"
+          selector:
+            text: {}
+        line_7_hex_color:
+          name: Hex Color
+          default: "#888888"
+          selector:
+            text: {}
+        line_7_status_entity:
+          name: Status Entity
+          description: |
+            Sensor entity for line status.
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+
+    # Line 8
+    line_8:
+      name: Line 8
+      icon: mdi:subway-variant
+      collapsed: true
+      input:
+        line_8_enabled:
+          name: Enable Line 8
+          default: false
+          selector:
+            boolean: {}
+        line_8_label:
+          name: Label
+          default: "Line 8"
+          selector:
+            text: {}
+        line_8_hex_color:
+          name: Hex Color
+          default: "#888888"
+          selector:
+            text: {}
+        line_8_status_entity:
+          name: Status Entity
+          description: |
+            Sensor entity for line status.
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+
+    # Line 9
+    line_9:
+      name: Line 9
+      icon: mdi:subway-variant
+      collapsed: true
+      input:
+        line_9_enabled:
+          name: Enable Line 9
+          default: false
+          selector:
+            boolean: {}
+        line_9_label:
+          name: Label
+          default: "Line 9"
+          selector:
+            text: {}
+        line_9_hex_color:
+          name: Hex Color
+          default: "#888888"
+          selector:
+            text: {}
+        line_9_status_entity:
+          name: Status Entity
+          description: |
+            Sensor entity for line status.
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+
+    # Line 10
+    line_10:
+      name: Line 10
+      icon: mdi:subway-variant
+      collapsed: true
+      input:
+        line_10_enabled:
+          name: Enable Line 10
+          default: false
+          selector:
+            boolean: {}
+        line_10_label:
+          name: Label
+          default: "Line 10"
+          selector:
+            text: {}
+        line_10_hex_color:
+          name: Hex Color
+          default: "#888888"
+          selector:
+            text: {}
+        line_10_status_entity:
+          name: Status Entity
+          description: |
+            Sensor entity for line status.
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+
+    # Line 11
+    line_11:
+      name: Line 11
+      icon: mdi:subway-variant
+      collapsed: true
+      input:
+        line_11_enabled:
+          name: Enable Line 11
+          default: false
+          selector:
+            boolean: {}
+        line_11_label:
+          name: Label
+          default: "Line 11"
+          selector:
+            text: {}
+        line_11_hex_color:
+          name: Hex Color
+          default: "#888888"
+          selector:
+            text: {}
+        line_11_status_entity:
+          name: Status Entity
+          description: |
+            Sensor entity for line status.
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+
+    # Line 12
+    line_12:
+      name: Line 12
+      icon: mdi:subway-variant
+      collapsed: true
+      input:
+        line_12_enabled:
+          name: Enable Line 12
+          default: false
+          selector:
+            boolean: {}
+        line_12_label:
+          name: Label
+          default: "Line 12"
+          selector:
+            text: {}
+        line_12_hex_color:
+          name: Hex Color
+          default: "#888888"
+          selector:
+            text: {}
+        line_12_status_entity:
+          name: Status Entity
+          description: |
+            Sensor entity for line status.
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+
+    # Line 13
+    line_13:
+      name: Line 13
+      icon: mdi:subway-variant
+      collapsed: true
+      input:
+        line_13_enabled:
+          name: Enable Line 13
+          default: false
+          selector:
+            boolean: {}
+        line_13_label:
+          name: Label
+          default: "Line 13"
+          selector:
+            text: {}
+        line_13_hex_color:
+          name: Hex Color
+          default: "#888888"
+          selector:
+            text: {}
+        line_13_status_entity:
+          name: Status Entity
+          description: |
+            Sensor entity for line status.
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+
+    # Line 14
+    line_14:
+      name: Line 14
+      icon: mdi:subway-variant
+      collapsed: true
+      input:
+        line_14_enabled:
+          name: Enable Line 14
+          default: false
+          selector:
+            boolean: {}
+        line_14_label:
+          name: Label
+          default: "Line 14"
+          selector:
+            text: {}
+        line_14_hex_color:
+          name: Hex Color
+          default: "#888888"
+          selector:
+            text: {}
+        line_14_status_entity:
+          name: Status Entity
+          description: |
+            Sensor entity for line status.
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+
+    # Line 15
+    line_15:
+      name: Line 15
+      icon: mdi:subway-variant
+      collapsed: true
+      input:
+        line_15_enabled:
+          name: Enable Line 15
+          default: false
+          selector:
+            boolean: {}
+        line_15_label:
+          name: Label
+          default: "Line 15"
+          selector:
+            text: {}
+        line_15_hex_color:
+          name: Hex Color
+          default: "#888888"
+          selector:
+            text: {}
+        line_15_status_entity:
+          name: Status Entity
+          description: |
+            Sensor entity for line status.
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+
+    # Line 16
+    line_16:
+      name: Line 16
+      icon: mdi:subway-variant
+      collapsed: true
+      input:
+        line_16_enabled:
+          name: Enable Line 16
+          default: false
+          selector:
+            boolean: {}
+        line_16_label:
+          name: Label
+          default: "Line 16"
+          selector:
+            text: {}
+        line_16_hex_color:
+          name: Hex Color
+          default: "#888888"
+          selector:
+            text: {}
+        line_16_status_entity:
+          name: Status Entity
+          description: |
+            Sensor entity for line status.
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+
+    # Line 17
+    line_17:
+      name: Line 17
+      icon: mdi:subway-variant
+      collapsed: true
+      input:
+        line_17_enabled:
+          name: Enable Line 17
+          default: false
+          selector:
+            boolean: {}
+        line_17_label:
+          name: Label
+          default: "Line 17"
+          selector:
+            text: {}
+        line_17_hex_color:
+          name: Hex Color
+          default: "#888888"
+          selector:
+            text: {}
+        line_17_status_entity:
+          name: Status Entity
+          description: |
+            Sensor entity for line status.
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+
+    # Line 18
+    line_18:
+      name: Line 18
+      icon: mdi:subway-variant
+      collapsed: true
+      input:
+        line_18_enabled:
+          name: Enable Line 18
+          default: false
+          selector:
+            boolean: {}
+        line_18_label:
+          name: Label
+          default: "Line 18"
+          selector:
+            text: {}
+        line_18_hex_color:
+          name: Hex Color
+          default: "#888888"
+          selector:
+            text: {}
+        line_18_status_entity:
+          name: Status Entity
+          description: |
+            Sensor entity for line status.
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+
+variables:
+  notify_service: !input notify_service
+  title: !input title
+  group_label: !input group_label
+  group_hex_color: !input group_hex_color
+  group_status: !input group_status
+  # Line 1
+  line_1_enabled: !input line_1_enabled
+  line_1_label: !input line_1_label
+  line_1_hex_color: !input line_1_hex_color
+  line_1_status_entity: !input line_1_status_entity
+  # Line 2
+  line_2_enabled: !input line_2_enabled
+  line_2_label: !input line_2_label
+  line_2_hex_color: !input line_2_hex_color
+  line_2_status_entity: !input line_2_status_entity
+  # Line 3
+  line_3_enabled: !input line_3_enabled
+  line_3_label: !input line_3_label
+  line_3_hex_color: !input line_3_hex_color
+  line_3_status_entity: !input line_3_status_entity
+  # Line 4
+  line_4_enabled: !input line_4_enabled
+  line_4_label: !input line_4_label
+  line_4_hex_color: !input line_4_hex_color
+  line_4_status_entity: !input line_4_status_entity
+  # Line 5
+  line_5_enabled: !input line_5_enabled
+  line_5_label: !input line_5_label
+  line_5_hex_color: !input line_5_hex_color
+  line_5_status_entity: !input line_5_status_entity
+  # Line 6
+  line_6_enabled: !input line_6_enabled
+  line_6_label: !input line_6_label
+  line_6_hex_color: !input line_6_hex_color
+  line_6_status_entity: !input line_6_status_entity
+  # Line 7
+  line_7_enabled: !input line_7_enabled
+  line_7_label: !input line_7_label
+  line_7_hex_color: !input line_7_hex_color
+  line_7_status_entity: !input line_7_status_entity
+  # Line 8
+  line_8_enabled: !input line_8_enabled
+  line_8_label: !input line_8_label
+  line_8_hex_color: !input line_8_hex_color
+  line_8_status_entity: !input line_8_status_entity
+  # Line 9
+  line_9_enabled: !input line_9_enabled
+  line_9_label: !input line_9_label
+  line_9_hex_color: !input line_9_hex_color
+  line_9_status_entity: !input line_9_status_entity
+  # Line 10
+  line_10_enabled: !input line_10_enabled
+  line_10_label: !input line_10_label
+  line_10_hex_color: !input line_10_hex_color
+  line_10_status_entity: !input line_10_status_entity
+  # Line 11
+  line_11_enabled: !input line_11_enabled
+  line_11_label: !input line_11_label
+  line_11_hex_color: !input line_11_hex_color
+  line_11_status_entity: !input line_11_status_entity
+  # Line 12
+  line_12_enabled: !input line_12_enabled
+  line_12_label: !input line_12_label
+  line_12_hex_color: !input line_12_hex_color
+  line_12_status_entity: !input line_12_status_entity
+  # Line 13
+  line_13_enabled: !input line_13_enabled
+  line_13_label: !input line_13_label
+  line_13_hex_color: !input line_13_hex_color
+  line_13_status_entity: !input line_13_status_entity
+  # Line 14
+  line_14_enabled: !input line_14_enabled
+  line_14_label: !input line_14_label
+  line_14_hex_color: !input line_14_hex_color
+  line_14_status_entity: !input line_14_status_entity
+  # Line 15
+  line_15_enabled: !input line_15_enabled
+  line_15_label: !input line_15_label
+  line_15_hex_color: !input line_15_hex_color
+  line_15_status_entity: !input line_15_status_entity
+  # Line 16
+  line_16_enabled: !input line_16_enabled
+  line_16_label: !input line_16_label
+  line_16_hex_color: !input line_16_hex_color
+  line_16_status_entity: !input line_16_status_entity
+  # Line 17
+  line_17_enabled: !input line_17_enabled
+  line_17_label: !input line_17_label
+  line_17_hex_color: !input line_17_hex_color
+  line_17_status_entity: !input line_17_status_entity
+  # Line 18
+  line_18_enabled: !input line_18_enabled
+  line_18_label: !input line_18_label
+  line_18_hex_color: !input line_18_hex_color
+  line_18_status_entity: !input line_18_status_entity
+
+sequence:
+  # Validation: Ensure at least one line is enabled
+  - choose:
+      - conditions:
+          - condition: template
+            value_template: >-
+              {{ not (line_1_enabled or line_2_enabled or line_3_enabled or
+                      line_4_enabled or line_5_enabled or line_6_enabled or
+                      line_7_enabled or line_8_enabled or line_9_enabled or
+                      line_10_enabled or line_11_enabled or line_12_enabled or
+                      line_13_enabled or line_14_enabled or line_15_enabled or
+                      line_16_enabled or line_17_enabled or line_18_enabled) }}
+        sequence:
+          - stop: "Please enable at least one transit line."
+
+  - action: !input notify_service
+    data:
+      title: "{{ title }}"
+      message: ""
+      data:
+        notif_type: transit
+        transit:
+          group:
+            label: "{{ group_label }}"
+            hex_color: "{{ group_hex_color }}"
+            status: "{{ group_status }}"
+          status: >-
+            {% set lines = namespace(list=[]) %}
+            {% if line_1_enabled and line_1_status_entity %}
+              {% set lines.list = lines.list + [{'label': line_1_label, 'hex_color': line_1_hex_color, 'status': state_translated(line_1_status_entity)}] %}
+            {% endif %}
+            {% if line_2_enabled and line_2_status_entity %}
+              {% set lines.list = lines.list + [{'label': line_2_label, 'hex_color': line_2_hex_color, 'status': state_translated(line_2_status_entity)}] %}
+            {% endif %}
+            {% if line_3_enabled and line_3_status_entity %}
+              {% set lines.list = lines.list + [{'label': line_3_label, 'hex_color': line_3_hex_color, 'status': state_translated(line_3_status_entity)}] %}
+            {% endif %}
+            {% if line_4_enabled and line_4_status_entity %}
+              {% set lines.list = lines.list + [{'label': line_4_label, 'hex_color': line_4_hex_color, 'status': state_translated(line_4_status_entity)}] %}
+            {% endif %}
+            {% if line_5_enabled and line_5_status_entity %}
+              {% set lines.list = lines.list + [{'label': line_5_label, 'hex_color': line_5_hex_color, 'status': state_translated(line_5_status_entity)}] %}
+            {% endif %}
+            {% if line_6_enabled and line_6_status_entity %}
+              {% set lines.list = lines.list + [{'label': line_6_label, 'hex_color': line_6_hex_color, 'status': state_translated(line_6_status_entity)}] %}
+            {% endif %}
+            {% if line_7_enabled and line_7_status_entity %}
+              {% set lines.list = lines.list + [{'label': line_7_label, 'hex_color': line_7_hex_color, 'status': state_translated(line_7_status_entity)}] %}
+            {% endif %}
+            {% if line_8_enabled and line_8_status_entity %}
+              {% set lines.list = lines.list + [{'label': line_8_label, 'hex_color': line_8_hex_color, 'status': state_translated(line_8_status_entity)}] %}
+            {% endif %}
+            {% if line_9_enabled and line_9_status_entity %}
+              {% set lines.list = lines.list + [{'label': line_9_label, 'hex_color': line_9_hex_color, 'status': state_translated(line_9_status_entity)}] %}
+            {% endif %}
+            {% if line_10_enabled and line_10_status_entity %}
+              {% set lines.list = lines.list + [{'label': line_10_label, 'hex_color': line_10_hex_color, 'status': state_translated(line_10_status_entity)}] %}
+            {% endif %}
+            {% if line_11_enabled and line_11_status_entity %}
+              {% set lines.list = lines.list + [{'label': line_11_label, 'hex_color': line_11_hex_color, 'status': state_translated(line_11_status_entity)}] %}
+            {% endif %}
+            {% if line_12_enabled and line_12_status_entity %}
+              {% set lines.list = lines.list + [{'label': line_12_label, 'hex_color': line_12_hex_color, 'status': state_translated(line_12_status_entity)}] %}
+            {% endif %}
+            {% if line_13_enabled and line_13_status_entity %}
+              {% set lines.list = lines.list + [{'label': line_13_label, 'hex_color': line_13_hex_color, 'status': state_translated(line_13_status_entity)}] %}
+            {% endif %}
+            {% if line_14_enabled and line_14_status_entity %}
+              {% set lines.list = lines.list + [{'label': line_14_label, 'hex_color': line_14_hex_color, 'status': state_translated(line_14_status_entity)}] %}
+            {% endif %}
+            {% if line_15_enabled and line_15_status_entity %}
+              {% set lines.list = lines.list + [{'label': line_15_label, 'hex_color': line_15_hex_color, 'status': state_translated(line_15_status_entity)}] %}
+            {% endif %}
+            {% if line_16_enabled and line_16_status_entity %}
+              {% set lines.list = lines.list + [{'label': line_16_label, 'hex_color': line_16_hex_color, 'status': state_translated(line_16_status_entity)}] %}
+            {% endif %}
+            {% if line_17_enabled and line_17_status_entity %}
+              {% set lines.list = lines.list + [{'label': line_17_label, 'hex_color': line_17_hex_color, 'status': state_translated(line_17_status_entity)}] %}
+            {% endif %}
+            {% if line_18_enabled and line_18_status_entity %}
+              {% set lines.list = lines.list + [{'label': line_18_label, 'hex_color': line_18_hex_color, 'status': state_translated(line_18_status_entity)}] %}
+            {% endif %}
+            {{ lines.list }}
