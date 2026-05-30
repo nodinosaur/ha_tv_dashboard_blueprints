@@ -3,7 +3,7 @@ blueprint:
   description: |
     Stream a camera to Android TV using a HA TV Dashboard notification.
     Requires (HA TV Dashboard)[https://play.google.com/store/apps/details?id=io.homeassistant.companion.androidtv] 2026.2.1 (139) or newer.
-    Blueprint version 1.0.1
+    Blueprint version 1.1.0
   domain: script
   author: nodinosaur / George
   source_url: https://github.com/nodinosaur/ha_tv_dashboard_blueprints/blob/main/script/stream_camera_to_tv.yaml
@@ -67,10 +67,27 @@ blueprint:
           selector:
             text: {}
 
+        rtsp_mode:
+          name: RTSP Transport
+          description: |
+            Select the RTSP transport protocol. Only applies when Stream Format is RTSP.
+            - UDP is the default and works for most cameras.
+            - TCP can help when UDP is blocked by firewalls or causes packet loss.
+          default: ""
+          selector:
+            select:
+              options:
+                - label: "Default"
+                  value: ""
+                - label: "UDP"
+                  value: "udp"
+                - label: "TCP"
+                  value: "tcp"
+
         image:
           description: |
-            Path to camera snapshot image "/local/… or http://… ". 
-            Assets available here - 
+            Path to camera snapshot image "/local/… or http://… ".
+            Assets available here -
             https://github.com/nodinosaur/ha_tv_dashboard_wiki/wiki/Graphical-assets
           name: Preview Image URL / Path
           default: ""
@@ -226,6 +243,7 @@ variables:
   camera_name: !input camera_name
   format: !input format
   camera_feed: !input camera_feed
+  rtsp_mode: !input rtsp_mode
   image: !input image
   icon: !input icon
   filter: !input filter
@@ -268,3 +286,4 @@ sequence:
           transparency: "{{ transparency | int }}"
           color: "{{ '#%02x%02x%02x' | format(color[0], color[1], color[2]) }}"
           show_frame: "{{ show_frame }}"
+          rtsp_mode: "{{ rtsp_mode if rtsp_mode | trim else none }}"
