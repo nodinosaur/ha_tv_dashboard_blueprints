@@ -32,12 +32,20 @@ Pick a Blueprint and press the button to add to Home Assistant, or paste the raw
 
 | Blueprint | Description | Import |
 |-----------|-------------|--------|
-| 📹 **Stream Camera to TV** | Display camera feeds on your TV | [![Import](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fscript%2Fstream_camera_to_tv.yaml) |
-| 🚇 **Transit Status to TV** | Show transit line status updates | [![Import](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fscript%2Ftransit_to_tv.yaml) |
-| 🌤️ **Weather to TV** | Display current weather conditions | [![Import](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fscript%2Fweather_to_tv.yaml) |
-| 🕐 **Time to TV** | Show current time on your TV | [![Import](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fscript%2Ftime_to_tv.yaml) |
-| 📅 **Calendar Events to TV** | Display today's calendar events | [![Import](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fscript%2Fcalendar_todays_events_to_tv.yaml) |
-| 🔌 **Connection Status to TV** | Verify websocket connection | [![Import](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fscript%2Fconnection_to_tv.yaml) |
+| 📹 **Stream Camera to TV** | Display camera feeds on your TV | [![Import][badge]][import-stream-camera] |
+| 🚇 **Transit Status to TV** | Show transit line status updates | [![Import][badge]][import-transit] |
+| 🌤️ **Weather to TV** | Display current weather conditions | [![Import][badge]][import-weather] |
+| 🕐 **Time to TV** | Show current time on your TV | [![Import][badge]][import-time] |
+| 📅 **Calendar Events to TV** | Display today's calendar events | [![Import][badge]][import-calendar] |
+| 🔌 **Connection Status to TV** | Verify websocket connection | [![Import][badge]][import-connection] |
+
+[badge]: https://my.home-assistant.io/badges/blueprint_import.svg
+[import-stream-camera]: https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fscript%2Fstream_camera_to_tv.yaml
+[import-transit]: https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fscript%2Ftransit_to_tv.yaml
+[import-weather]: https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fscript%2Fweather_to_tv.yaml
+[import-time]: https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fscript%2Ftime_to_tv.yaml
+[import-calendar]: https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fscript%2Fcalendar_todays_events_to_tv.yaml
+[import-connection]: https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fscript%2Fconnection_to_tv.yaml
 
 ---
 
@@ -45,7 +53,9 @@ Pick a Blueprint and press the button to add to Home Assistant, or paste the raw
 
 | Blueprint | Description | Import |
 |-----------|-------------|--------|
-| 🚨 **Stream Camera on Trigger** | Auto-display camera when triggered (doorbell, motion, etc.) | [![Import](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fautomation%2Fstream_camera_on_trigger_to_tv.yaml) |
+| 🚨 **Stream Camera on Trigger** | Auto-display camera when triggered (doorbell, motion, etc.) | [![Import][badge]][import-trigger] |
+
+[import-trigger]: https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fnodinosaur%2Fha_tv_dashboard_blueprints%2Fblob%2Fmain%2Fautomation%2Fstream_camera_on_trigger_to_tv.yaml
 
 ---
 
