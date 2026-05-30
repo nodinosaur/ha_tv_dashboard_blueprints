@@ -2,7 +2,8 @@ blueprint:
   name: Stream Camera to TV
   description: |
     Stream a camera to Android TV using a HA TV Dashboard notification.
-    Requires (HA TV Dashboard)[https://play.google.com/store/apps/details?id=io.homeassistant.companion.androidtv] 2026.2.1 (139) or newer.
+    Requires HA TV Dashboard 2026.2.1 (139) or newer.
+    https://play.google.com/store/apps/details?id=io.homeassistant.companion.androidtv
     Blueprint version 1.1.0
   domain: script
   author: nodinosaur / George

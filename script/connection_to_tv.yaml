@@ -3,7 +3,8 @@ blueprint:
   description: |
     Send websocket connection status to Android TV using HA TV Dashboard notification.
     Useful for verifying the TV's connection to Home Assistant.
-    Requires (HA TV Dashboard)[https://play.google.com/store/apps/details?id=io.homeassistant.companion.androidtv] 2026.2.1 (139) or newer.
+    Requires HA TV Dashboard 2026.2.1 (139) or newer.
+    https://play.google.com/store/apps/details?id=io.homeassistant.companion.androidtv
     Blueprint version 1.0.0
   domain: script
   author: nodinosaur / George

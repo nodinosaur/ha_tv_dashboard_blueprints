@@ -3,7 +3,8 @@ blueprint:
   description: |
     Display current weather on Android TV using HA TV Dashboard notification.
     Choose your preferred weather service entity.
-    Requires (HA TV Dashboard)[https://play.google.com/store/apps/details?id=io.homeassistant.companion.androidtv] 2026.2.1 (139) or newer.
+    Requires HA TV Dashboard 2026.2.1 (139) or newer.
+    https://play.google.com/store/apps/details?id=io.homeassistant.companion.androidtv
     Blueprint version 1.0.0
   domain: script
   author: nodinosaur / George

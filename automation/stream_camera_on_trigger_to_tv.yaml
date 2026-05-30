@@ -3,7 +3,8 @@ blueprint:
   description: |
     Stream a camera to Android TV when a trigger fires using HA TV Dashboard notification.
     Configure your own trigger (e.g., doorbell press, motion detected, button press).
-    Requires (HA TV Dashboard)[https://play.google.com/store/apps/details?id=io.homeassistant.companion.androidtv] 2026.2.1 (139) or newer.
+    Requires HA TV Dashboard 2026.2.1 (139) or newer.
+    https://play.google.com/store/apps/details?id=io.homeassistant.companion.androidtv
     Blueprint version 1.0.0
   domain: automation
   author: nodinosaur / George
